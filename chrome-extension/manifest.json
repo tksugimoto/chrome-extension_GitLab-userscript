@@ -1,0 +1,17 @@
+{
+	"name": "GitLab Support",
+	"version": "0.1.0",
+	"manifest_version": 2,
+
+	"description": "GitLabのMergeRequestでcommit（のdiff）を見るとコミットメッセージが表示されない問題に対処",
+
+	"content_scripts": [{
+		"matches": [
+			"*://*/*/*/merge_requests/*/diffs?commit_id=*"
+		],
+		"js": [
+			"js/private_token.js",
+			"js/show_commit_message.js"
+		]
+	}]
+}
