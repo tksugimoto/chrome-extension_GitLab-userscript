@@ -1,5 +1,5 @@
 {
-	const privateToken = window.privateToken;
+	const privateToken = window.privateTokenMap[location.host];
 
 	const projectId = document.getElementById('search_project_id').value;
 	const commitHash = new URL(document.URL).searchParams.get('commit_id');
