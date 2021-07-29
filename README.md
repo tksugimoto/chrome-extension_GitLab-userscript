@@ -1,5 +1,6 @@
 # GitLab用Chrome拡張
-GitLabのMergeRequestでcommit（のdiff）を見るとコミットメッセージが表示されない問題に対処する
+- GitLabのMergeRequestでcommit（のdiff）を見るとコミットメッセージが表示されない問題に対処する
+- `<textarea>` での入力中 Tab キーでインデント入力
 
 # 使用準備
 1. `./chrome-extension/js/` に `private_token.js` を作る
