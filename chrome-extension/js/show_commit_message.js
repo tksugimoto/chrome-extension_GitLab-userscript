@@ -3,7 +3,8 @@
 
 	const projectId = document.getElementById('search_project_id').value;
 	const commitHash = new URL(document.URL).searchParams.get('commit_id');
-	const url = `/api/v4/projects/${projectId}/repository/commits/${commitHash}?private_token=${privateToken}`;
+	const basePath = document.getElementById('logo').href;
+	const url = `${basePath}api/v4/projects/${projectId}/repository/commits/${commitHash}?private_token=${privateToken}`;
 
 	fetch(url).then(res => res.json()).then(json => {
 		console.info(json);
