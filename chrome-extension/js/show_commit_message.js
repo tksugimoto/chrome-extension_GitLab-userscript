@@ -1,7 +1,7 @@
 {
 	const privateToken = window.privateTokenMap[location.host];
 
-	const projectId = document.getElementById('search_project_id').value;
+	const projectId = document.querySelector('#search_project_id, #project_id').value;
 	const commitHash = new URL(document.URL).searchParams.get('commit_id');
 	const basePath = document.getElementById('logo').href;
 	const url = `${basePath}api/v4/projects/${projectId}/repository/commits/${commitHash}?private_token=${privateToken}`;
